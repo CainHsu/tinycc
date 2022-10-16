@@ -7,9 +7,10 @@ int main(int argc, char **argv){
         return 1;
     }
 
-    printf("  .globl main\n");
-    printf("main:\n");
-    printf("  mov $%d, %%rax\n", atoi(argv[1]));
+    printf("  .globl _main\n");
+    printf("  .p2align	2\n");
+    printf("_main:\n");
+    printf("  mov w0, #%d\n", atoi(argv[1]));
     printf("  ret\n");
     return 0;
 }

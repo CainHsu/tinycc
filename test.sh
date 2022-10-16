@@ -3,7 +3,7 @@ assert(){
     input="$2"
 
     ./out $input > tmp.s || exit
-    gcc -static -o tmp tmp.s
+    gcc -o tmp tmp.s
     ./tmp
     res=$?
 
